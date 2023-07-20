@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="opensans_regular_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+
+    <link rel="stylesheet" href="styles.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript">
+      mxBasePath = 'mxgraph/src';
+    </script>
+    <script src="mxgraph/mxClient.min.js"></script>
+
+    <style>
+      #content {
+      padding: 0 0 0 20;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div id="navbar">
+      <ul>
+	<li><a class="active" href="index.html">Home</a></li>
+	<!--<li><a href="definitions.html">Definitions</a></li>-->
+	<!--<li><a href="proofs_index.html">Proofs</a></li>-->
+      </ul>
+    </div>
+
+    <div id="content">
+      <h2>Welcome to the CryptoZoo!</h2>
+      <h4> A place where state separating proofs (SSPs) live. </h4>
+      <p>
+		<a href="#sspresources">State-separating proofs SSPs</a>
+	      are a style to define cryptographic properties and in particular to structure their proofs.
+	        The CryptoZoo proof viewer allows you to engage with proofs interactively, find relevant information quickly, hide information
+	        that isn't interesting to you at the moment and much more. 
+	      
+      <p>
+	  <p>
+		Want to check out how it works? Here are three nice examples!
+		<ul>
+		  <li>
+			<p>
+			  <a href="sim-ind-cpa-landing.html">IND-CPA</a>: This is a warm-up example if you are not so familiar
+			  with SSPs or cryptographic definitions as a whole. It shows that two security notions for
+			  symmetric encryption are equivalent.
+			</p>
+		  </li>
+		  <li>
+			<p>
+			  <a href="ggm-landing.html">GGM PRF-from-PRG</a>: This is a (constant-depth) version of a famous proof by
+			  <a href="https://www.wisdom.weizmann.ac.il/~oded/ggm.html">Goldreich, Goldwasser and Micali (GGM)</a> who show
+			  that pseudorandom generators (PRGs) imply stream ciphers, a.k.a. pseudorandom functions (PRFs),
+			  by stacking PRGs in a tree-like fashion. In SSP-style fashion, the proof is very
+			  short and neat (for a constant-depth tree) and thus a nice intermediate example.
+			  It is also a very clean example of a <a href="#sspresources">hybrid proof</a>.			  .
+			</p>
+		  </li>
+		  <li>
+			<p>
+			  <a href="yao-landing.html">Garbling Security of Yao's Protocol</a>: This is a
+			  proof of <a href="https://eprint.iacr.org/2004/175">Yao's famous garbling scheme</a>, 
+			  which is a core building block for secure multi-party computation. This is the most advanced
+			  example and involves a hybrid over the depth and width of a circuit. We visualize
+			  the <a href="https://eprint.iacr.org/2021/1453">state-separating proof</a> of Yao's garbling scheme by Brzuska and Oechsner.
+			</p>
+			<ul>
+			</ul>
+		  </li>
+		</ul>
+	  </p>
+	  <h4 id="sspresources">SSP Ressources</h4>
+	  <p>
+		For a nice introduction to SSPs, Lúcás Meier wrote a <a href="https://cronokirby.com/posts/2022/05/state-separable-proofs-for-the-curious-cryptographer/">overview blogpost</a> that is highly recommended.
+		For a formal and rigorous introduction to SSPs you can check out the
+		<a href="https://eprint.iacr.org/2018/306/20180403:132933" target="_blank">BDFKK paper</a>
+		who also have a nice introduction to hybrid proofs in Appendix B.
+	  </p>
+    </div>
+  </body>
+</html>
